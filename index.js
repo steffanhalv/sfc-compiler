@@ -6,7 +6,7 @@ let app = express()
 
 app.use(express.json())
 
-app.post('/compile', async (req, res) => {
+app.post('/compile', async (req, res, next) => {
     try {
     let url = req?.body?.url
     let response = await fetch(url)
@@ -16,7 +16,7 @@ app.post('/compile', async (req, res) => {
     let results = fs.readFileSync('./dist/component.js')
     res.send(results)
     } catch(e) {
-        res.send('error')
+        next(e)
     }
 })
 
