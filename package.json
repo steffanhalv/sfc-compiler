@@ -1,0 +1,15 @@
+{
+    "type": "module",
+    "scripts": {
+        "start": "node index.js",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^4.4.0",
+        "vite": "^4.4.11",
+        "vite-plugin-css-injected-by-js": "^3.3.0"
+    },
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
