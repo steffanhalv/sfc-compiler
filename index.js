@@ -1,10 +1,12 @@
 import express from 'express'
 import { execSync } from 'child_process'
 import fs from 'fs'
+import cors from 'cors'
 
 let app = express()
 
 app.use(express.json())
+app.use(cors())
 
 app.post('/compile', async (req, res, next) => {
     try {
